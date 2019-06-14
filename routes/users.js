@@ -17,12 +17,7 @@ router.post('/', (req, res) => {
 /* get users */
 router.get('/', function(req, res) {
   User.find({'email': 'a@a.com'}, (err, res) => {
-    if (err) {
-      return err;
-    }
-    else {
-      res.json();
-    }
+    res.json();
   });
 });
 
