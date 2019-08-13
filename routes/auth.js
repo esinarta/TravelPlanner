@@ -15,10 +15,10 @@ router.post('/register', async (req, res) => {
       res.redirect('/register');
     } else {
       req.session.currentUser = user;
-      req.flash('success', 'You have successfully registered');
       res.redirect('/dashboard');
     }
   });
+  console.log(user);
 });
 
 //Login
@@ -30,11 +30,9 @@ router.post('/', async (req, res) => {
     }
     //Validate password with Bcrypt
     if(!user || !Bcrypt.compareSync(req.body.password, user.password)) {
-      req.flash('success', 'Login failed');
       res.redirect('/login');
     } else {
       req.session.currentUser = user;
-      req.flash('success', 'You have successfully logged in');
       res.redirect('/dashboard');
     }
   });

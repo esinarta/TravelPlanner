@@ -54,7 +54,7 @@ body {
   .form__input:focus {
     background: #f7f7f7; }
 
-.btn {
+#submit {
   display: block;
   width: 100%;
   padding: 20px;
@@ -65,7 +65,7 @@ body {
   color: white;
   background: #aba194;
   transition: 0.3s; }
-  .btn:hover {
+  #submit:hover {
     background: #a09486; }
 
 @keyframes NO {
