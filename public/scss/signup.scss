@@ -25,14 +25,14 @@ body {
   margin: 10vh auto;
 }
 
-.user__header {
+.user_header {
   text-align: center;
   opacity: 0;
   transform: translate3d(0, 500px, 0);
   animation: arrive 500ms ease-in-out 0.7s forwards;
 }
 
-.user__title {
+.user_title {
   font-size: $font-size;
   margin-bottom: -10px;
   font-weight: 500;
@@ -54,7 +54,7 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
-.form__input {
+.form_input {
   display: block;
   width: 100%;
   padding: 20px;

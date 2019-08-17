@@ -2,32 +2,36 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/signup.css' />
+    <link rel="stylesheet" href="/stylesheets/signup.css" />
   </head>
   <body>
     <div class="user">
-      <header class="user__header"> 
-          <h1 class="user__title">Sign Up</h1>
+      <header class="user_header">
+        <h1 class="user_title">Sign Up</h1>
       </header>
-      
-      <form class="form">
-          <div class="form__group">
-              <input type="text" placeholder="Username" class="form__input" />
-          </div>
-          
-          <div class="form__group">
-              <input type="email" placeholder="Email" class="form__input" />
-          </div>
-          
-          <div class="form__group">
-              <input type="password" placeholder="Password" class="form__input" />
-          </div>
-          
-          <input id='submit' type="submit" value="Register">
-      </form>
-  </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src='../public/javascripts/signup.js'></script>
+      <form class="form" action="/users/register" method="POST">
+        <div class="form_group">
+          <input type="text" placeholder="First Name" class="form_input" name="first_name"/>
+        </div>
+
+        <div class="form_group">
+          <input type="text" placeholder="Last Name" class="form_input" name="last_name"/>
+        </div>
+
+        <div class="form_group">
+          <input type="email" placeholder="Email" class="form_input" name="email"/>
+        </div>
+
+        <div class="form_group">
+          <input type="password" placeholder="Password" class="form_input" name="password"/>
+        </div>
+
+        <input id="submit" type="submit" value="Register" />
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../public/javascripts/signup.js"></script>
   </body>
 </html>
