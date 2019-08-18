@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      req.session.currentUser = user;
+      //req.session.currentUser = user;
       res.redirect('/');
     }
   });

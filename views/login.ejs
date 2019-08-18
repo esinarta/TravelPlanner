@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/signup.css" />
+  </head>
+  <body>
+    <div class="user">
+      <header class="user_header">
+        <h1 class="user_title">Login</h1>
+      </header>
+
+      <form class="form" action="/users/login" method="POST">
+        <div class="form_group">
+          <input type="email" placeholder="Email" class="form_input" name="email"/>
+        </div>
+
+        <div class="form_group">
+          <input type="password" placeholder="Password" class="form_input" name="password"/>
+        </div>
+
+        <input id="submit" type="submit" value="Login" />
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../public/javascripts/signup.js"></script>
+  </body>
+</html>
