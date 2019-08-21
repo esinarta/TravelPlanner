@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form class="form" action="/flights/add" method="POST">
+      <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label"
+          >Flight Code</label
+        >
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="text"
+            id="example-text-input"
+            name="flight_code"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-text-input" class="col-2 col-form-label"
+          >Airline</label
+        >
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="text"
+            id="example-text-input"
+            name="airline"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-date-input" class="col-2 col-form-label"
+          >Date</label
+        >
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="date"
+            value=""
+            id="example-date-input"
+            name="date"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label"
+          >Departure Time</label
+        >
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="time"
+            value=""
+            id="example-time-input"
+            name="departure_time"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="example-time-input" class="col-2 col-form-label"
+          >Arrival Time</label
+        >
+        <div class="col-10">
+          <input
+            class="form-control"
+            type="time"
+            value=""
+            id="example-time-input"
+            name="arrival_time"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="example-text-input" class="col-2 col-form-label"
+            >Departing Airport</label
+          >
+          <div class="col-10">
+            <input
+              class="form-control"
+              type="text"
+              id="example-text-input"
+              name="departing_airport"
+            />
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label"
+              >Arriving Airport</label
+            >
+            <div class="col-10">
+              <input
+                class="form-control"
+                type="text"
+                id="example-text-input"
+                name="arriving_airport"
+              />
+            </div>
+          </div>
+      <input id="submit" type="submit" value="Add"/>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </body>
+</html>

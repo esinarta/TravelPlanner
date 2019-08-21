@@ -14,4 +14,12 @@ router.get('/login', function(req, res, next) {
   res.render('login', { title: 'Login' });
 });
 
+router.get('/add_stay', function(req, res, next) {
+  res.render('add_stay', { title: 'Add Stay' });
+});
+
+router.get('/add_flight', function(req, res, next) {
+  res.render('add_flight', { title: 'Add Flight' });
+});
+
 module.exports = router;

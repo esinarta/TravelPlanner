@@ -14,7 +14,7 @@ const staySchema = new mongoose.Schema({
     type: Date
   },
   checkin_time: {
-    type: Date
+    type: String
   },
   checkout_time: {
     type: String
