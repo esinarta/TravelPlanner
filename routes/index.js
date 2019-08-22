@@ -22,4 +22,8 @@ router.get('/add_flight', function(req, res, next) {
   res.render('add_flight', { title: 'Add Flight' });
 });
 
+router.get('/add_trip', function(req, res, next) {
+  res.render('add_trip', { title: 'Add Trip' });
+});
+
 module.exports = router;
