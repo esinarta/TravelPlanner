@@ -3,6 +3,9 @@ var router = express.Router();
 const models = require('../models/');
 const mongoose = require("mongoose");
 
+const Flight = models.Flight;
+const Stay = models.Stay;
+
 mongoose.connect('mongodb://localhost:27017/local', {
   useNewUrlParser: true
 });

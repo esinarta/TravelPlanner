@@ -24,7 +24,24 @@
           />
         </div>
       </div>
+      <select name='flight' class='dropdown'>
+        <option value='select' class='dropdown-opt'>Select Flight</option>
+        <% for (var i = 0; i <flights.length; i++) { %>
+          <option value=<%= flights[i]._id %> class="dropdown-opt">
+            <%= flights[i].flight_code %>
+          </option>
+        <% } %>
+      </select>
       <a href="/add_flight">Add Flight</a>
+
+      <select name='stay' class='dropdown'>
+        <option value='select' class='dropdown-opt'>Select Stay</option>
+        <% for (var i = 0; i <stays.length; i++) { %>
+          <option value=<%= stays[i]._id %> class="dropdown-opt">
+            <%= stays[i].name %>
+          </option>
+        <% } %>
+      </select>
       <a href="/add_stay">Add Stay</a>
       <input id="submit" type="submit" value="Create Trip"/>
     </form>

@@ -1,5 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const models = require('../models/');
+const mongoose = require("mongoose");
+
+const Flight = models.Flight;
+const Stay = models.Stay;
+const Trip = models.Trip;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -22,8 +28,20 @@ router.get('/add_flight', function(req, res, next) {
   res.render('add_flight', { title: 'Add Flight' });
 });
 
-router.get('/add_trip', function(req, res, next) {
-  res.render('add_trip', { title: 'Add Trip' });
+router.get('/add_trip', async (req, res, next) => {
+  const flights = await Flight.find({
+    //user: user._id
+  });
+
+  const stays = await Stay.find({
+    //user: user._id
+  });
+
+  res.render('add_trip', { 
+    title: 'Add Trip',
+    flights: flights,
+    stays: stays
+  });
 });
 
 module.exports = router;
