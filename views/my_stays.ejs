@@ -11,21 +11,11 @@
   </head>
   <body>
     <div id="content">
-      <% if (trips.length == 0) { %>
+      <% if (stays.length == 0) { %>
         <h1 id="nothing">None</h1>
       <% } %>
-      <% for (var i = 0; i < trips.length; i++) { %>
+      <% for (var i = 0; i <stays.length; i++) { %>
         <div id="">
-          <div class="label"><b>Name:</b> <%= trips[i].name %></div>
-          <br>
-          <div class="label"><b>Flight:</b></div>
-          <div class="label">Flight Code: <%= flights[i].flight_code %></div>
-          <div class="label">Date: <%= flights[i].date %></div>
-          <div class="label">Departing From: <%= flights[i].departing_airport %></div>
-          <div class="label">Arriving At: <%= flights[i].arriving_airport %></div>
-          <div class="label">Departure Time: <%= flights[i].departure_time %></div>
-          <div class="label">Arrival Time: <%= flights[i].arrival_time %></div>
-          <br>
           <div class="label"><b>Stay:</b></div>
           <div class="label">Name of Accommodation: <%= stays[i].name %></div>
           <div class="label">Address: <%= stays[i].address %></div>
@@ -33,8 +23,8 @@
           <div class="label">Check-Out Date: <%= stays[i].checkout_date %></div>
           <div class="label">Check-In Time: <%= stays[i].checkin_time %></div>
           <div class="label">Check-Out Time: <%= stays[i].checkout_time %></div>
-          <form id='delete' action='/trips/delete' method="POST">
-            <input type='hidden' value=<%= trips[i]._id %> name='trip_id'>
+          <form id='delete' action='/stays/delete' method="POST">
+            <input type='hidden' value=<%= stays[i]._id %> name='stay_id'>
             <input type='submit' value="Delete">
           </form>
           <hr>

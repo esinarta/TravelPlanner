@@ -20,4 +20,11 @@ router.post('/add', async (req, res) => {
   //}
 });
 
+router.post('/delete', (req, res) => {
+  let s = req.body.stay_id;
+  Stay.findByIdAndRemove(s, (err, stay) => {
+    if (err) return next(err);
+  });
+});
+
 module.exports = router;

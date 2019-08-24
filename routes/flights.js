@@ -20,4 +20,11 @@ router.post('/add', async (req, res) => {
   //}
 });
 
+router.post('/delete', (req, res) => {
+  let f = req.body.flight_id;
+  Flight.findByIdAndRemove(f, (err, flight) => {
+    if (err) return next(err);
+  });
+});
+
 module.exports = router;

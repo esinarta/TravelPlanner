@@ -21,6 +21,13 @@ router.post('/add', async (req, res) => {
   //}
 });
 
+router.post('/delete', (req, res) => {
+  let t = req.body.trip_id;
+  Trip.findByIdAndRemove(t, (err, trip) => {
+    if (err) return next(err);
+  });
+});
+
 const Trip = models.Trip;
 
 module.exports = router;

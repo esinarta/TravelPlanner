@@ -63,4 +63,26 @@ router.get('/my_trips', async (req, res, next) => {
   });
 });
 
+router.get('/my_flights', async (req, res, next) => {
+  const flights = await Flight.find({
+    //user: user._id
+  });
+
+  res.render('my_flights', { 
+    title: 'My Flights',
+    flights: flights
+  });
+});
+
+router.get('/my_stays', async (req, res, next) => {
+  const stays = await Stay.find({
+    //user: user._id
+  });
+
+  res.render('my_stays', { 
+    title: 'My Stays',
+    stays: stays
+  });
+});
+
 module.exports = router;
