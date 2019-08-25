@@ -12,6 +12,25 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Travel Planner' });
 });
 
+router.get('/dashboard', async (req, res, next) => {
+  const flights = await Flight.find({
+    //user: user._id
+  });
+
+  const stays = await Stay.find({
+    //user: user._id
+  });
+
+  const trips = await Trip.find({});
+
+  res.render('dashboard', { 
+    title: 'Dashboard',
+    flights: flights,
+    stays: stays,
+    trips: trips
+  });
+});
+
 router.get('/register', function(req, res, next) {
   res.render('signup', { title: 'Sign Up' });
 });
