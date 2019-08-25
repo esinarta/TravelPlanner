@@ -20,7 +20,7 @@ router.post('/register', (req, res) => {
       res.send(err);
     } else {
       //req.session.currentUser = user;
-      res.redirect('/');
+      res.redirect('/dashboard');
     }
   });
 });
@@ -37,7 +37,7 @@ router.post('/login', (req, res) => {
       res.redirect('/login');
     } else {
       //req.session.currentUser = user;
-      res.redirect('/');
+      res.redirect('/dashboard');
     }
   });
 });

@@ -19,71 +19,29 @@ body {
   height: 100vh;
 }
 
-.user {
-  width: 90%;
-  max-width: 340px;
-  margin: 10vh auto;
-}
-
-.user_header {
-  text-align: center;
-  opacity: 0;
-  transform: translate3d(0, 500px, 0);
-  animation: arrive 500ms ease-in-out 0.7s forwards;
-}
-
-.user_title {
-  font-size: $font-size;
-  margin-bottom: -10px;
-  font-weight: 500;
+h1 {
   color: white;
+  font-size: 50pt;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.form {
-  margin-top: 40px;
-  border-radius: 6px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translate3d(0, 500px, 0);
-  animation: arrive 500ms ease-in-out 0.9s forwards;
-}
-
-.form--no {
-  animation: NO 1s ease-in-out;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-}
-
-.form_input {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  font-family: $font-family;
-  -webkit-appearance: none;
-  border: 0;
-  outline: 0;
-  transition: 0.3s;
-
-  &:focus {
-    background: darken(#fff, 3%);
-  }
-}
-
-#submit {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  font-family: $font-family;
-  -webkit-appearance: none;
-  outline: 0;
-  border: 0;
+a {
   color: white;
-  background: $color-primary;
-  transition: 0.3s;
+  font-size: 18pt;
+}
 
-  &:hover {
-    background: darken($color-primary, 5%);
-  }
+.links {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  left: 80%;
+}
+
+.links div {
+  margin: 1rem;
 }
 
 @keyframes NO {
