@@ -13,10 +13,13 @@
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/css/uikit.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.7/js/uikit-icons.min.js"></script>
   </head>
   <body>
     <%- include('navbar') -%>
-    <div id="content">
+    <div id="content" uk-sortable="handle: .mdc-card">
       <div class="mdc-card">
         <div>Add Trip</div>
         <button onclick="location.href = '/add_trip';" class="mdc-button mdc-card__action mdc-card__action--button">
