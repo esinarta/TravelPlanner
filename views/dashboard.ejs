@@ -19,9 +19,9 @@
     <div id="content">
       <div class="mdc-card">
         <div>Add Trip</div>
-        <button class="mdc-button mdc-card__action mdc-card__action--button">
-            <span class="mdc-button__label">Add</span>
-          </button>
+        <button onclick="location.href = '/add_trip';" class="mdc-button mdc-card__action mdc-card__action--button">
+          <span class="mdc-button__label">Add</span>
+        </button>
       </div>
       <% if (trips.length == 0) { %>
         <h1 id="nothing">None</h1>

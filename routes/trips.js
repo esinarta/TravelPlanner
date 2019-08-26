@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/local', {
 });
 
 router.post('/add', async (req, res) => {
-  //let user = req.session.currentUser;
+  let user = req.session.currentUser;
   //if (user) {
     //req.body.user = user._id;
     let trip = new models.Trip(req.body);

@@ -5,9 +5,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/dashboard">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/dashboard">Home</span></a>
         <a class="nav-item nav-link" href="/my_flights">Flights</a>
         <a class="nav-item nav-link" href="/my_stays">Stays</a>
+        <a class="nav-item nav-link" href="/users/logout">Log Out</a>
+        <form class="form-inline" action="/users/logout" method="GET">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+        </form>
       </div>
     </div>
   </nav>

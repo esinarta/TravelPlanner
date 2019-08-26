@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost:27017/local', {
 const Stay = models.Stay;
 
 router.post('/add', async (req, res) => {
-  //let user = req.session.currentUser;
+  let user = req.session.currentUser;
   //if (user) {
     //req.body.user = user._id;
     let stay = new models.Stay(req.body);

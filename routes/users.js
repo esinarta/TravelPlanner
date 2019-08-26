@@ -19,7 +19,7 @@ router.post('/register', (req, res) => {
     if (err) {
       res.send(err);
     } else {
-      //req.session.currentUser = user;
+      req.session.currentUser = user;
       res.redirect('/dashboard');
     }
   });
@@ -36,7 +36,7 @@ router.post('/login', (req, res) => {
     if(!user || !Bcrypt.compareSync(req.body.password, user.password)) {
       res.redirect('/login');
     } else {
-      //req.session.currentUser = user;
+      req.session.currentUser = user;
       res.redirect('/dashboard');
     }
   });
@@ -47,6 +47,12 @@ router.get('/', function(req, res) {
   User.find( (err, user) => {
     res.json(user);
   });
+});
+
+//Logout
+router.get('/logout', (req, res) => {
+  req.session.currentUser = null;
+  res.redirect('/');
 });
 
 module.exports = router;
