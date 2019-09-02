@@ -3,6 +3,13 @@
 
 .mdc-card {
   height: 50vh;
-  width: 30vh;
+  width: 35vh;
   margin: 2rem;
   padding: 1rem; }
+
+#addtrip {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40pt;
+  padding-top: 5rem;
+  color: grey; }

@@ -20,7 +20,7 @@
   <body>
     <%- include('navbar') -%>
     <div id="content" uk-sortable="handle: .mdc-card">
-      <div class="mdc-card">
+      <div class="mdc-card" id="addtrip">
         <div>Add Trip</div>
         <button onclick="location.href = '/add_trip';" class="mdc-button mdc-card__action mdc-card__action--button">
           <span class="mdc-button__label">Add</span>
@@ -31,13 +31,13 @@
       <% } %>
       <% for (var i = 0; i < trips.length; i++) { %>
         <div class="mdc-card">
-          <div class="label"><b>Name:</b> <%= trips[i].name %></div>
+          <div class="label"><%= trips[i].name %></div>
           <br>
-          <div class="label"><b>Flight:</b></div>
+          <div class="label"><b>Dates: </b><%= trips[i].start_date.toLocaleDateString(); %> - <%= trips[i].end_date.toLocaleDateString(); %></div>
+          <br>
           <div class="label">Flight Code: <%= flights[i].flight_code %></div>
           <div class="label">Date: <%= flights[i].date %></div>
           <br>
-          <div class="label"><b>Stay:</b></div>
           <div class="label">Name of Accommodation: <%= stays[i].name %></div>
           <div class="mdc-card__actions">
             <button class="mdc-button mdc-card__action mdc-card__action--button">
@@ -50,7 +50,6 @@
               </button>
             </form>
           </div>
-          <hr>
         </div>
       <% } %>
     </div>

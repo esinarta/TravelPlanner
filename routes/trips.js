@@ -14,7 +14,12 @@ router.post('/add', async (req, res) => {
   let user = req.session.currentUser;
   //if (user) {
     //req.body.user = user._id;
-    let trip = new models.Trip(req.body);
+    let trip = new models.Trip();
+    trip.name = req.body.name;
+    trip.start_date = new Date(req.body.start_date);
+    trip.end_date = new Date(req.body.end_date);
+    trip.flight = req.body.flight_id;
+    trip.stay = req.body.stay_id;
     await trip.save();
   //} else {
     //res.redirect('/login');
