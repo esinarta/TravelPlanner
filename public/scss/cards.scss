@@ -4,7 +4,7 @@
 
 .mdc-card {
   height: 50vh;
-  width: 35vh;
+  width: 30vh;
   margin: 2rem;
   padding: 1rem;
 }
@@ -15,4 +15,11 @@
   font-size: 40pt;
   padding-top: 5rem;
   color: grey;
+}
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11pt;
+  color: rgb(92, 92, 92);
 }
