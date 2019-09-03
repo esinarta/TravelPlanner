@@ -1,11 +1,12 @@
 #content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mdc-card {
   height: 50vh;
   width: 30vh;
-  margin: 2rem;
+  margin: 3rem;
   padding: 1rem;
 }
 
